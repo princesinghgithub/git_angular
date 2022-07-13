@@ -1,0 +1,48 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle();">notes</mat-icon>
+    </button>
+    <span>Custom Toolbar</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button style="color: #1bc5bdab">Creat</button>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>brightness_4</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>drag_indicator</mat-icon>
+    </button>
+    <button mat-icon-button color="accent" class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon">
+      <mat-icon>perm_identity</mat-icon>
+    </button>
+    <button mat-icon-button mat-fab color="warn" class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon">
+      <!-- <mat-icon>favorite</mat-icon> -->3
+    </button>
+  </mat-toolbar-row>
+
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-list>
+      <a mat-list-item> Home </a>
+      <a mat-list-item> About </a>
+      <a mat-list-item> contact </a>
+      <a mat-list-item> helps </a>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh">
+      <app-dashboard></app-dashboard>
+    </div>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
+
+
+
+<router-outlet></router-outlet>
